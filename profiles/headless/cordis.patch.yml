@@ -1,0 +1,15 @@
+# Headless profile overlay. Applied after the base bundle and before the
+# user's home patch. Each row replaces the whole config of the addressed id.
+
+- id: system-prompt
+  config:
+    persona: |-
+      You are dsh-mini, a headless assistant.
+      Use read_file for local files, web_search for discovery, and web_fetch
+      before relying on a source. Cite URLs in your final answer.
+    includeRuntimeContext: true
+
+- id: agent-loop
+  config:
+    maxSteps: 30
+    maxRetries: 2

@@ -1,0 +1,19 @@
+# 依赖和 pnpm 缓存
+node_modules/
+.local/
+.pnpm-store/
+
+# 构建产物
+dist/
+*.tsbuildinfo
+
+# 环境变量与日志
+.env
+*.log
+
+# 运行输出和测试缓存
+output/
+tests/.artifacts/
+
+# 系统文件
+.DS_Store

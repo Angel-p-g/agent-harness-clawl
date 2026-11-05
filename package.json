@@ -1,0 +1,37 @@
+{
+  "name": "dsh-mini",
+  "version": "0.1.0-alpha.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "packageManager": "pnpm@11.28.5",
+  "engines": {
+    "node": ">=24.9.0"
+  },
+  "workspaces": [
+    "packages/*/*",
+    "apps/*",
+    "profiles/*"
+  ],
+  "scripts": {
+    "dsh": "node --import tsx/esm apps/cli/src/bin.ts",
+    "dev": "node --import tsx/esm apps/cli/src/bin.ts headless",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run --passWithNoTests",
+    "test:web": "vitest run tests/web-request.spec.ts",
+    "clean": "rm -rf packages/*/*/lib apps/*/lib profiles/*/lib"
+  },
+  "devDependencies": {
+    "@joplin/turndown-plugin-gfm": "^1.0.68",
+    "@types/js-beautify": "^1.14.3",
+    "@types/node": "^22.20.1",
+    "@types/turndown": "^5.0.6",
+    "cordis": "4.0.0-rc.12",
+    "js-beautify": "^2.0.3",
+    "pnpm": "11.28.5",
+    "tsx": "^4.23.13",
+    "turndown": "^7.2.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.11"
+  }
+}

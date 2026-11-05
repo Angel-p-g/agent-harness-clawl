@@ -1,0 +1,16 @@
+packages:
+  - 'packages/*/*'
+  - 'apps/*'
+  - 'profiles/*'
+
+# Keep pnpm's content-addressable store and cache inside the repository.
+storeDir: .local/pnpm-store
+cacheDir: .local/pnpm-cache
+
+# Same TypeScript peer range deepseek-harness allows.
+peerDependencyRules:
+  allowedVersions:
+    typescript: '>=5 <7'
+
+allowBuilds:
+  esbuild: true

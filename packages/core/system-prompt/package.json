@@ -1,0 +1,30 @@
+{
+  "name": "@dsh-mini/system-prompt",
+  "version": "0.1.0-alpha.0",
+  "description": "Ordered prompt sections and tool-schema assembly",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": ["lib", "src"],
+  "peerDependencies": {
+    "@dsh-mini/llm": "workspace:*",
+    "@dsh-mini/session": "workspace:*",
+    "@dsh-mini/tools": "workspace:*",
+    "cordis": "4.0.0-rc.12"
+  },
+  "devDependencies": {
+    "@dsh-mini/llm": "workspace:*",
+    "@dsh-mini/session": "workspace:*",
+    "@dsh-mini/tools": "workspace:*",
+    "cordis": "4.0.0-rc.12"
+  }
+}

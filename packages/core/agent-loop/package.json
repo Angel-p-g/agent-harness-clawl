@@ -1,0 +1,34 @@
+{
+  "name": "@dsh-mini/agent-loop",
+  "version": "0.1.0-alpha.0",
+  "description": "Default agent driver implementing the turn and step lifecycle",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": ["lib", "src"],
+  "peerDependencies": {
+    "@dsh-mini/agent": "workspace:*",
+    "@dsh-mini/llm": "workspace:*",
+    "@dsh-mini/session": "workspace:*",
+    "@dsh-mini/system-prompt": "workspace:*",
+    "@dsh-mini/tools": "workspace:*",
+    "cordis": "4.0.0-rc.12"
+  },
+  "devDependencies": {
+    "@dsh-mini/agent": "workspace:*",
+    "@dsh-mini/llm": "workspace:*",
+    "@dsh-mini/session": "workspace:*",
+    "@dsh-mini/system-prompt": "workspace:*",
+    "@dsh-mini/tools": "workspace:*",
+    "cordis": "4.0.0-rc.12"
+  }
+}

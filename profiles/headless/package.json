@@ -1,0 +1,15 @@
+{
+  "name": "@dsh-mini/profile-headless",
+  "version": "0.1.0-alpha.0",
+  "description": "Headless profile: the base bundle plus profile-level prompt and loop overrides",
+  "private": true,
+  "type": "module",
+  "dsh": {
+    "profile": [
+      "@dsh-mini/bundle-base"
+    ]
+  },
+  "dependencies": {
+    "@dsh-mini/bundle-base": "workspace:*"
+  }
+}
